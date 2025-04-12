@@ -54,6 +54,8 @@ def isPatternMatching(pattern, words):
 print("Solution 1",isPatternMatching("abab",["bat", "ball", "bat", "ball"]))    
 
 def isPatternMatchingMySolution(pattern, words):
+    if len(pattern) != len(words):
+        return False
     pattern_matching_object=defaultdict(list)
     for index, char in enumerate(pattern):
         pattern_matching_object[char].append(index)
